@@ -82,7 +82,7 @@ const About = () => {
             Our goal at TSC Agency is simple. Create a buzz about our client and
             their brand. We do this by strategic planning and creating packages
             that are most suitable to you. From concept to execution, TSC Agency
-            will work hard to tell your brand's story.
+            will work hard to tell your brand&apos;s story.
           </span>
         </div>
 
