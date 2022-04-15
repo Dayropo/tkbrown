@@ -13,19 +13,19 @@ const Modal = ({ setOpenModal }) => {
         />
       </div>
       <div className="flex flex-col space-y-2 text-center text-2xl font-semibold">
-        <Link href="/">
+        <Link href="/" passHref>
           <span className="hover:text-gravy cursor-pointer">Home</span>
         </Link>
-        <Link href="/about">
+        <Link href="/about" passHref>
           <span className="hover:text-gravy cursor-pointer">About</span>
         </Link>
-        <Link href="/services">
+        <Link href="/services" passHref>
           <span className="hover:text-gravy cursor-pointer">Services</span>
         </Link>
-        <Link href="/portfolio">
+        <Link href="/portfolio" passHref>
           <span className="hover:text-gravy cursor-pointer">Portfolio</span>
         </Link>
-        <Link href="/contact">
+        <Link href="/contact" passHref>
           <span className="hover:text-gravy cursor-pointer">Contact</span>
         </Link>
       </div>

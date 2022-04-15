@@ -4,14 +4,14 @@ import Link from "next/link"
 const Navbar = ({ page }) => {
   return (
     <div className="flex border-b border-gravy justify-between py-10 px-10 font-poppins text-white relative">
-      <Link href="/">
+      <Link href="/" passHref>
         <span className="hover:text-gravy cursor-pointer font-playfair">
           TK Brown
         </span>
       </Link>
 
       <div className="flex items-center space-x-8 text-xs font-semibold">
-        <Link href="/">
+        <Link href="/" passHref>
           <span className="hover:text-gravy cursor-pointer">HOME</span>
         </Link>
         <Link href="/about">
