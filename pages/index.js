@@ -40,7 +40,7 @@ export default function Home() {
       <header className="py-10 px-10 bg-swirl bg-cover bg-center">
         {/**nav bar */}
         <div className="flex items-center justify-between">
-          <Link href="/">
+          <Link href="/" passHref>
             <div className="text-3xl cursor-pointer font-playfair">
               TK Brown
             </div>
