@@ -17,6 +17,8 @@ module.exports = {
       backgroundImage: {
         swirl: "url(../public/swirl_t1.png)",
         about: "url(../public/about-background.png)",
+        aboutCloud:
+          "url(https://res.cloudinary.com/dayropo/image/upload/v1650049471/about-background_zhkq9b.png)",
       },
       colors: {
         modal: "rgb(0, 0, 0, 0.9)",

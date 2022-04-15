@@ -17,7 +17,7 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="relative h-screen bg-about bg-cover bg-right-top before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-opa">
+      <header className="relative h-screen bg-aboutCloud bg-cover bg-right-top before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-opa">
         <Navbar page="about" />
         <div className="h-full w-full flex justify-center items-center text-white relative font-oswald">
           <span className="text-[125px] font-semibold">ABOUT US</span>
