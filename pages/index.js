@@ -1,8 +1,6 @@
 import { useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
-import Link from "next/link"
-import { FiMenu } from "react-icons/fi"
 import afaSports from "../public/AFA SPORTS.png"
 import arise from "../public/Arise LOGO.jpg"
 import bam from "../public/Biola Alabi Media.jpg"
@@ -12,6 +10,7 @@ import hwell from "../public/Honeywell.jpeg"
 import hype from "../public/Hype.png"
 import ilare from "../public/Ilare.png"
 import Modal from "../components/Modal"
+import Navbar from "../components/Navbar"
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false)
@@ -37,26 +36,12 @@ export default function Home() {
 
       {openModal && <Modal setOpenModal={setOpenModal} />}
 
-      <header className="py-10 px-10 bg-swirl bg-cover bg-center">
+      <header className="bg-swirl bg-cover bg-center">
         {/**nav bar */}
-        <div className="flex items-center justify-between">
-          <Link href="/" passHref>
-            <div className="text-3xl cursor-pointer font-playfair">
-              TK Brown
-            </div>
-          </Link>
+        <Navbar page="home" setOpenModal={setOpenModal} />
 
-          <div>
-            <FiMenu
-              size={24}
-              onClick={() => setOpenModal(true)}
-              className="cursor-pointer"
-            />
-          </div>
-        </div>
-
-        <div className="px-6 py-10 text-center w-3/5 mx-auto">
-          <p className="text-4.5xl leading-normal font-playfair">
+        <div className="px-6 py-10 text-center sm:w-3/5 mx-auto">
+          <p className="sm:text-4.5xl text-2xl leading-normal font-playfair">
             <strong>Brand Strategy & Communications</strong> agency offering
             customised services allowing brands to focus on the core of the
             business.
@@ -71,7 +56,10 @@ export default function Home() {
 
         <div className="flex flex-wrap">
           {clients.map((client, index) => (
-            <div key={index} className="w-1/4 p-8 border-y border-gray-200">
+            <div
+              key={index}
+              className="lg:w-1/4 w-1/2 p-8 border-y border-gray-200"
+            >
               <div className="relative flex w-full pb-[100%] justify-center items-center">
                 <Image
                   src={client.image}
