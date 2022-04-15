@@ -14,9 +14,6 @@ module.exports = {
       fontSize: {
         "4.5xl": "2.5rem",
       },
-      background: {
-        test: "url(../public/about-background.png), #00000060",
-      },
       backgroundImage: {
         swirl: "url(../public/swirl_t1.png)",
         about: "url(../public/about-background.png)",

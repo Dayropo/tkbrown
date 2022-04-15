@@ -37,7 +37,7 @@ export default function Home() {
 
       {openModal && <Modal setOpenModal={setOpenModal} />}
 
-      <header className="py-10 px-10 bg-[url(../public/swirl_t1.png)] bg-cover bg-center">
+      <header className="py-10 px-10 bg-swirl bg-cover bg-center">
         {/**nav bar */}
         <div className="flex items-center justify-between">
           <Link href="/">
