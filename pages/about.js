@@ -17,10 +17,12 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="relative h-screen bg-about bg-cover bg-right-top before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-opa">
+      <header className="relative h-screen bg-about bg-cover lg:bg-right-top bg-center before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-opa">
         <Navbar page="about" />
-        <div className="h-full w-full flex justify-center items-center text-white relative font-oswald">
-          <span className="text-[125px] font-semibold">ABOUT US</span>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-oswald">
+          <span className="xl:text-9xl md:text-7xl text-3xl font-semibold">
+            ABOUT US
+          </span>
         </div>
         <div className="absolute bottom-6 left-1/2 text-white">
           <a href="#section-2">
@@ -30,7 +32,7 @@ const About = () => {
       </header>
 
       <main id="section-2" className="min-h-screen flex flex-wrap relative">
-        <div className="relative w-1/3 h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
+        <div className="relative md:w-1/3 w-full h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
           <div className="bg-black rounded-full p-6 text-white">
             <FaUsers size={48} />
           </div>
@@ -41,11 +43,11 @@ const About = () => {
           </span>
         </div>
 
-        <div className="relative w-1/3 h-[420px] bg-gray-100 flex items-center justify-center">
-          <span className="font-playfair text-6xl">TK Brown</span>
+        <div className="relative md:w-1/3 w-full h-[420px] bg-gray-100 flex items-center justify-center">
+          <span className="font-playfair text-6xl text-center">TK Brown</span>
         </div>
 
-        <div className="relative w-1/3 h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
+        <div className="relative md:w-1/3 w-full h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
           <div className="bg-black rounded-full p-6 text-white">
             <FaDesktop size={48} />
           </div>
@@ -55,15 +57,21 @@ const About = () => {
           </span>
         </div>
 
-        <div className="relative w-1/3 h-[420px]">
+        <div className="relative md:w-1/3 w-full h-[420px]">
           <Image src={box4} alt="" objectFit="cover" layout="fill" />
         </div>
 
-        <div className="relative w-1/3 h-[420px]">
-          <Image src={box5} alt="" objectFit="cover" layout="fill" />
+        <div className="relative md:w-1/3 w-full h-[420px]">
+          <Image
+            src={box5}
+            alt=""
+            objectFit="cover"
+            layout="fill"
+            objectPosition="center"
+          />
         </div>
 
-        <div className="relative w-1/3 h-[420px]">
+        <div className="relative md:w-1/3 w-full h-[420px]">
           <Image
             src={box6}
             alt=""
@@ -73,7 +81,7 @@ const About = () => {
           />
         </div>
 
-        <div className="relative w-1/3 h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
+        <div className="relative md:w-1/3 w-full h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
           <div className="bg-black rounded-full p-6 text-white">
             <FaBullhorn size={48} />
           </div>
@@ -86,7 +94,7 @@ const About = () => {
           </span>
         </div>
 
-        <div className="relative w-1/3 h-[420px]">
+        <div className="relative md:w-1/3 w-full h-[420px]">
           <Image
             src={box8}
             alt=""
@@ -96,7 +104,7 @@ const About = () => {
           />
         </div>
 
-        <div className="relative w-1/3 h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
+        <div className="relative md:w-1/3 w-full h-[420px] flex flex-col items-center justify-center bg-swirl bg-cover bg-center space-y-6">
           <div className="bg-black rounded-full p-6 text-white">
             <FaTrophy size={48} />
           </div>
