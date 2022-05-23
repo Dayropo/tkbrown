@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import Footer from "./Footer"
 import { FaChevronUp } from "react-icons/fa"
+import Navbar from "./Navbar"
 
 const Layout = ({ children }) => {
-  const [active, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
     const showButton = () => {
@@ -18,11 +19,12 @@ const Layout = ({ children }) => {
   }, [])
   return (
     <div className="relative font-poppins cursor-default min-h-screen">
+      <Navbar />
       {children}
       <Footer />
       <button
         className={`bottom-4 right-4 w-11 h-11 rounded-full bg-purple-700 items-center justify-center text-white shadow hover:-translate-y-1 transform transition ${
-          active ? "flex fixed" : "hidden"
+          isActive ? "flex fixed" : "hidden"
         }`}
         onClick={() =>
           window.scrollTo({

@@ -31,6 +31,7 @@ module.exports = {
         mobile: "#1B1D1F",
         header: "#0052fe",
         values: "#eff1fe",
+        sidebar: "rgb(0, 0, 0, 0.9)",
       },
     },
   },

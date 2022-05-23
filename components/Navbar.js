@@ -2,10 +2,11 @@ import { useState, useEffect } from "react"
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 import Link from "next/link"
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi"
+import Menu from "./Menu"
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     const changeBackground = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 z-30 py-8 px-16 flex items-center justify-between ${
+      className={`fixed w-full top-0 z-30 py-8 xl:px-16 px-8 flex items-center justify-between ${
         active
           ? "bg-white text-black shadow-md"
           : "bg-transparent border-b border-gray-600 text-white"
@@ -62,12 +63,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="lg:hidden block">
-        {isOpen ? (
-          <FiX size={24} onClick={() => setIsOpen(!isOpen)} />
+      <div className="lg:hidden block relative">
+        {showMenu ? (
+          <FiX size={24} onClick={() => setShowMenu(!showMenu)} />
         ) : (
-          <FiMenu size={24} onClick={() => setIsOpen(!isOpen)} />
+          <FiMenu size={24} onClick={() => setShowMenu(!showMenu)} />
         )}
+        {showMenu && <Menu />}
       </div>
     </nav>
   )

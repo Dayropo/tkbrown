@@ -1,15 +1,16 @@
 import { useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
-import Navbar from "../components/Navbar"
 import { FiChevronDown } from "react-icons/fi"
 import dms from "../public/digital-media-strategy.webp"
 import content from "../public/content-marketing.webp"
-import digitalSales from "../public/digital-media-sales.webp"
+import advertising from "../public/targeting.webp"
 import adEngineering from "../public/ad-engineering.webp"
 
 const Services = () => {
   const [tab, setTab] = useState(0)
+  const [showSidebar, setShowSidebar] = useState(false)
+
   return (
     <div>
       <Head>
@@ -19,9 +20,6 @@ const Services = () => {
       </Head>
 
       <header className="relative h-screen bg-purple-900">
-        {/**navbar */}
-        <Navbar />
-
         {/**jumbo */}
         <div className="px-8 py-40 h-full font-bold text-white text-center flex items-center justify-center font-oswald">
           <span className="xl:text-9xl md:text-7xl text-3xl font-semibold">
@@ -47,8 +45,8 @@ const Services = () => {
       </header>
 
       {/**all services */}
-      <div className="py-24 px-32 flex">
-        <div className="w-1/4 px-4">
+      <div className="py-24 xl:px-32 md:px-16 px-8 flex lg:flex-row flex-col">
+        <div className="lg:w-1/4 md:w-1/2 w-full lg:mb-0 mb-8 px-4">
           <div className="px-8 py-8 rounded-2xl border border-gray-50 shadow-outline shadow-gray-200 divide-y-2 divide-gray-100 space-y-4">
             <p className="text-xl font-semibold">OUR SERVICES</p>
             <div className="space-y-4 py-4 flex flex-col">
@@ -62,7 +60,7 @@ const Services = () => {
                 className="cursor-pointer hover:text-purple-400 text-sm"
                 onClick={() => setTab(1)}
               >
-                Digital Media Strategy
+                Media Strategy
               </span>
               <span
                 className="cursor-pointer hover:text-purple-400 text-sm"
@@ -74,7 +72,7 @@ const Services = () => {
                 className="cursor-pointer hover:text-purple-400 text-sm"
                 onClick={() => setTab(3)}
               >
-                Digital Media Sales
+                Digital Media Advertising
               </span>
               <span
                 className="cursor-pointer hover:text-purple-400 text-sm"
@@ -86,36 +84,34 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="w-3/4 px-4">
+        <div className="lg:w-3/4 w-full px-4">
           <div className="px-8 rounded-2xl border border-gray-50 shadow-outline shadow-gray-200 divide-y-2 divide-gray-200">
             {tab === 0 || tab === 1 ? (
               <div className="py-8">
-                <p className="text-4xl font-semibold">Digital Media Strategy</p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
+                  Media Strategy
+                </p>
                 <div className="my-8 w-full h-96 relative">
                   <Image
                     src={dms}
-                    alt="Digital Media Strategy"
+                    alt="Media Strategy"
                     objectFit="contain"
                     layout="fill"
                   />
                 </div>
-                <p className="text-sm">
-                  The internet is a global village and we understand perfectly
-                  how to walk our way around it.As experts, we can help you
-                  define/recommend the best digital strategy for business growth
-                  and expansion. We understand the demography of popular
-                  platforms and understand which combination will yield maximum
-                  impact and ensure a positive ROI. Patronage is built on Ad
-                  visibility, on trust, and the ability to create a relationship
-                  with your clients and that is why we are here- we can help
-                  you!
+                <p className="md:text-sm text-xs">
+                  Through a unique combination of media expertise, we create and
+                  optimise media experiences that connect people to brands and
+                  offer the best strategy for growth and expansion.
                 </p>
               </div>
             ) : null}
 
             {tab === 0 || tab === 2 ? (
               <div className="py-8">
-                <p className="text-4xl font-semibold">Content Marketing</p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
+                  Content Marketing
+                </p>
                 <div className="my-8 w-full h-96 relative">
                   <Image
                     src={content}
@@ -124,45 +120,38 @@ const Services = () => {
                     layout="fill"
                   />
                 </div>
-                <p className="text-sm">
-                  If Content is fire and social media is gasoline, then Digital
-                  Tribe owns the refinery. We have the platforms and technical
-                  expertise to create and deploy banners, images, GIF,Rich Media
-                  and videos. We also monitor interactions,impressions,and
-                  clicks generated on advertised content. We run Africa’s
-                  largest mobile network; plugging into well over 50 platforms
-                  that allow all types of ad formats to be displayed. With the
-                  growth of smartphones and internet usage, mobile platforms
-                  create a fertile ground for content marketing.
+                <p className="md:text-sm text-xs">
+                  We have the expertise to rapidly scale your business, build a
+                  stronger online reputation & brand awareness.
                 </p>
               </div>
             ) : null}
 
             {tab === 0 || tab === 3 ? (
               <div className="py-8">
-                <p className="text-4xl font-semibold">Digital Media Sales</p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
+                  Digital Media Advertising
+                </p>
                 <div className="my-8 w-full h-96 relative">
                   <Image
-                    src={digitalSales}
-                    alt="Digital Media Sales"
+                    src={advertising}
+                    alt="Digital Media Advertising"
                     objectFit="contain"
                     layout="fill"
                   />
                 </div>
-                <p className="text-sm">
-                  We sell advertising space on popular online platforms such as
-                  websites, blogs, and digital properties. We help brands deploy
-                  several Ad formats, measure click metrics, and engagement
-                  measurement. Using automated technologies and viral platforms,
-                  we help brands drive their key messages to the right target
-                  audience.
+                <p className="md:text-sm text-xs">
+                  We partner with top online platforms to deploy various ad
+                  formats, optimise and measure engagement.
                 </p>
               </div>
             ) : null}
 
             {tab === 0 || tab === 4 ? (
               <div className="py-8">
-                <p className="text-4xl font-semibold">Ad Engineering</p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
+                  Ad Engineering
+                </p>
                 <div className="my-8 w-full h-96 relative">
                   <Image
                     src={adEngineering}
@@ -171,7 +160,7 @@ const Services = () => {
                     layout="fill"
                   />
                 </div>
-                <p className="text-sm">
+                <p className="md:text-sm text-xs">
                   The integration of technology in business has changed what
                   used to be a level playing field. Advertising has grown beyond
                   paying Facebook, Instagram, or even google for sponsored Ads.

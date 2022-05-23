@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Navbar from "../components/Navbar"
 import { FiChevronDown } from "react-icons/fi"
 import { MdEmail, MdPhone } from "react-icons/md"
 
@@ -13,9 +12,6 @@ const Contact = () => {
       </Head>
 
       <header className="relative h-screen bg-purple-900">
-        {/**navbar */}
-        <Navbar />
-
         {/**jumbo */}
         <div className="px-8 py-40 h-full font-bold text-white text-center flex items-center justify-center font-oswald">
           <span className="xl:text-9xl md:text-7xl text-3xl font-semibold">
@@ -40,9 +36,9 @@ const Contact = () => {
         </div>
       </header>
 
-      <div className="py-24 px-32 flex justify-center">
+      <div className="py-24 xl:px-32 md:px-16 px-8 flex justify-center">
         {/**email */}
-        <div className="w-1/3 px-4">
+        <div className="xl:w-1/3 md:w-1/2 w-full px-4">
           <div className="py-16 rounded-xl border border-gray-50 shadow-outline shadow-gray-200 flex flex-col items-center justify-center space-y-8">
             <div className="w-20 h-20 flex items-center justify-center rounded-full shadow-outline shadow-gray-200 hover:shadow-purple-400 hover:-translate-y-1 transform transition text-purple-600">
               <MdEmail size={32} />
@@ -58,7 +54,7 @@ const Contact = () => {
         </div>
 
         {/**phone */}
-        {/* <div className="w-1/3 px-4">
+        {/* <div className="xl:w-1/3 md:w-1/2 w-full px-4">
           <div className="py-16 rounded-xl border border-gray-50 shadow-outline shadow-gray-200 flex flex-col items-center justify-center space-y-8">
             <div className="w-20 h-20 flex items-center justify-center rounded-full shadow-outline shadow-gray-200 hover:shadow-purple-400 hover:-translate-y-1 transform transition text-purple-600">
               <MdPhone size={32} />
@@ -69,7 +65,7 @@ const Contact = () => {
         </div> */}
       </div>
 
-      <div className="py-24 px-32">
+      <div className="py-24 xl:px-32 md:px-16 px-8">
         <div className="py-8 rounded-xl border border-gray-50 shadow-outline shadow-gray-200">
           <div className="px-8 py-4">
             <p className="text-xl font-semibold">Say Hello To Us!</p>
@@ -77,8 +73,8 @@ const Contact = () => {
 
           <form action="">
             <div className="py-4">
-              <div className="flex">
-                <div className="w-1/3 px-8">
+              <div className="flex flex-wrap">
+                <div className="lg:w-1/3 sm:w-1/2 w-full px-4 lg:mb-0 mb-4">
                   <input
                     type="text"
                     name=""
@@ -86,7 +82,7 @@ const Contact = () => {
                     className="w-full bg-purple-50 py-3 px-6 rounded-full border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
                   />
                 </div>
-                <div className="w-1/3 px-8">
+                <div className="lg:w-1/3 sm:w-1/2 w-full px-4 sm:mb-0 mb-4">
                   <input
                     type="text"
                     name=""
@@ -94,7 +90,7 @@ const Contact = () => {
                     className="w-full bg-purple-50 py-3 px-6 rounded-full border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
                   />
                 </div>
-                <div className="w-1/3 px-8">
+                <div className="lg:w-1/3 sm:w-1/2 w-full px-4">
                   <input
                     type="text"
                     name=""
@@ -105,7 +101,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="py-4 px-8">
+            <div className="py-4 px-4">
               <textarea
                 name=""
                 placeholder="Your Message"
