@@ -17,8 +17,6 @@ import mission from "../public/mission.webp"
 import target from "../public/target.png"
 
 export default function Home() {
-  const [showSidebar, setShowSidebar] = useState(false)
-
   return (
     <div className="relative">
       <Head>
