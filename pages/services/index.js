@@ -2,10 +2,12 @@ import { useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
 import { FiChevronDown } from "react-icons/fi"
-import dms from "../public/digital-media-strategy.webp"
-import content from "../public/content-marketing.webp"
-import advertising from "../public/targeting.webp"
-import adEngineering from "../public/ad-engineering.webp"
+import dms from "../../public/digital-media-strategy.webp"
+import content from "../../public/content-marketing.webp"
+import advertising from "../../public/targeting.webp"
+import adEngineering from "../../public/ad-engineering.webp"
+import { LongText } from "../../utils"
+import Link from "next/link"
 
 const Services = () => {
   const [tab, setTab] = useState(0)
@@ -94,7 +96,7 @@ const Services = () => {
                 className="cursor-pointer hover:text-purple-400 text-sm"
                 onClick={() => setTab(4)}
               >
-                Ad Engineering
+                Advertising Technology
               </span>
             </div>
           </div>
@@ -115,7 +117,7 @@ const Services = () => {
                     layout="fill"
                   />
                 </div>
-                <p className="md:text-sm text-xs">
+                <p className="md:text-base text-xs">
                   Through a unique combination of media expertise, we create and
                   optimise media experiences that connect people to brands and
                   offer the best strategy for growth and expansion.
@@ -136,7 +138,7 @@ const Services = () => {
                     layout="fill"
                   />
                 </div>
-                <p className="md:text-sm text-xs">
+                <p className="md:text-base text-xs">
                   We have the expertise to rapidly scale your business, build a
                   stronger online reputation & brand awareness.
                 </p>
@@ -156,7 +158,7 @@ const Services = () => {
                     layout="fill"
                   />
                 </div>
-                <p className="md:text-sm text-xs">
+                <p className="md:text-base text-xs">
                   We partner with top online platforms to deploy various ad
                   formats, optimise and measure engagement.
                 </p>
@@ -166,18 +168,19 @@ const Services = () => {
             {tab === 0 || tab === 4 ? (
               <div className="py-8">
                 <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
-                  Ad Engineering
+                  Advertising Technology
                 </p>
                 <div className="my-8 w-full h-96 relative">
                   <Image
                     src={adEngineering}
-                    alt="Ad Engineering"
+                    alt="Advertising Technology"
                     objectFit="contain"
                     layout="fill"
                   />
                 </div>
-                <p className="md:text-sm text-xs">
-                  The integration of technology in business has changed what
+                <div>
+                  <p className="md:text-base text-xs">
+                    {/* The integration of technology in business has changed what
                   used to be a level playing field. Advertising has grown beyond
                   paying Facebook, Instagram, or even google for sponsored Ads.
                   Traditional advertising is good but the reach of digital
@@ -187,8 +190,42 @@ const Services = () => {
                   service allows clients use our dedicated Demand Side Platform
                   to deploy Ads on websites with huge traffic. Our clients can
                   target and retarget prospective customers using various Ad
-                  segments:
-                </p>
+                  segments: */}
+                    Every publisher, big or small, aims to benefit from its ad
+                    space as much as possible. But today's advertising
+                    environment is pretty fragmented. It changes constantly,
+                    almost at the speed of light. The result? A lot of space
+                    remains undersold. We believe that the right technology can
+                    fix this problem. So we created TKBrown Ads, a service that
+                    helps publishers increase their ad revenue. It opens the
+                    door to a world full of newbuyers by combining several ad
+                    bidding platforms into one. The idea behind this service is
+                    to improve yield management. Our ad technology lets multiple
+                    demand sources bid on the same ad space at the same time. It
+                    increases the competition and allows publishers to sell at
+                    the highest possible price. We present an opportunity to cut
+                    down ontime consuming and tasks and to immerse into the
+                    publisher's true calls, quality content creation, our
+                    expertise and advanced technology will handle the
+                    monetisation. Keep your company up with a dynamic ad
+                    environment and make the most revenue out of it. Give it a
+                    go, Join us today.
+                  </p>
+                  <p className="mt-4">Solutions We Offer</p>
+                  <ul className="ml-8">
+                    <li className="list-disc">Header Bidding</li>
+                  </ul>
+                </div>
+                <div className="flex justify-end">
+                  <Link
+                    href="/services/advert-technology/case-studies"
+                    passHref
+                  >
+                    <button className="mt-4 border-2 border-purple-400 text-purple-400 px-6 py-2 rounded-full hover:bg-purple-400 hover:text-white">
+                      View Case Studies
+                    </button>
+                  </Link>
+                </div>
               </div>
             ) : null}
           </div>
