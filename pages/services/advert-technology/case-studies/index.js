@@ -98,7 +98,7 @@ const CaseStudy = () => {
                 <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
                   The Standard Media
                 </p>
-                <div className="my-8 w-full h-96 relative">
+                <div className="my-8 w-full h-48 relative">
                   <Image
                     src={standard}
                     alt="The Standard Media"
@@ -182,7 +182,7 @@ const CaseStudy = () => {
                 <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
                   Channels
                 </p>
-                <div className="my-8 w-full h-96 relative">
+                <div className="my-8 w-full h-24 relative">
                   <Image
                     src={channels}
                     alt="Channels"
