@@ -162,7 +162,7 @@ const CaseStudy = () => {
                 <div className="my-4">
                   <p>
                     <span className="font-semibold text-lg">The Results:</span>{" "}
-                    Almost 200% ad revenue uplift and premium quality ads
+                    20% ad revenue uplift and premium quality ads
                   </p>
                   <p className="mt-4">
                     <span className="italic">
@@ -177,7 +177,7 @@ const CaseStudy = () => {
               </div>
             ) : null}
 
-            {/* {tab === 0 || tab === 2 ? (
+            {tab === 0 || tab === 2 ? (
               <div className="py-8">
                 <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
                   Channels
@@ -185,13 +185,81 @@ const CaseStudy = () => {
                 <div className="my-8 w-full h-96 relative">
                   <Image
                     src={channels}
-                    alt="The Standard Media"
+                    alt="Channels"
                     objectFit="contain"
                     layout="fill"
                   />
                 </div>
+
+                {/**intro */}
+                <div className="my-4">
+                  <p className="font-semibold italic">
+                    How TKBrown gained the client&apos;s trust and managed to
+                    increase ad revenue by almost 200%
+                  </p>
+                </div>
+
+                {/**about */}
+                <div className="my-4">
+                  <p className="font-semibold mb-2 text-lg">About Channels</p>
+                  <p className="md:text-base text-xs">
+                    Channels is one of the top news publishing websites in
+                    Africa. They offer a large collection of news update across
+                    various demography and sectors.
+                  </p>
+                </div>
+
+                {/**challenges */}
+                <div className="my-4">
+                  <p className="">
+                    <span className="font-semibold text-lg">
+                      The Challenge:
+                    </span>{" "}
+                    Eliminate client doubts regarding monetization and provide
+                    the right ad units
+                  </p>
+                  <p className="mt-2">
+                    For Channels it is vital to educate potential and current
+                    clients about monetization benefits. Website monetization
+                    isn&apos;t only about optimizing publishers&apos; ad
+                    revenue, but also technical expertise in the field, right ad
+                    placements, clients&apos; trust, time, and cost-efficiency.
+                  </p>
+                </div>
+
+                {/**solution */}
+                <div className="my-4">
+                  <p>
+                    <span className="text-lg font-semibold">Our Solution:</span>{" "}
+                    Individual account manager and easy implementation process
+                  </p>
+                  <div className="mt-2">
+                    Channels&apos;s main goal for TKBrown was to provide
+                    excellent support and personalized monetization solution.
+                    Thanks to our team of professionals, we managed to make the
+                    implementation process as simple as possible, so the
+                    publisher&apos;s ad revenue could start to increase rapidly.
+                  </div>
+                </div>
+
+                {/**results */}
+                <div className="my-4">
+                  <p>
+                    <span className="font-semibold text-lg">The Results:</span>{" "}
+                    Almost 200% ad revenue uplift and premium quality ads
+                  </p>
+                  {/* <p className="mt-4">
+                    <span className="italic">
+                      &quot;Thanks to our Chrome extension, I can simply follow
+                      up and understand which ad placements work better for my
+                      site and which are the ones that bring me the most money
+                      in real-time.&quot;
+                    </span>{" "}
+                    - Abayo, Online Advertising Executive
+                  </p> */}
+                </div>
               </div>
-            ) : null} */}
+            ) : null}
           </div>
         </div>
       </div>
