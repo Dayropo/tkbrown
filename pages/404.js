@@ -32,7 +32,7 @@ const PageNotFound = () => {
       <header className="bg-purple-900 h-screen relative">
         <div className="px-8 py-40 flex flex-col space-y-8 items-center justify-center">
           <div className="flex h-80 w-80 items-center justify-center relative">
-            <Image src={notFound} objectFit="contain" />
+            <Image src={notFound} alt="404" objectFit="contain" />
           </div>
           <Link href="/" passHref>
             <button className="py-3 px-9 bg-purple-600 hover:bg-purple-500 text-white rounded-full">

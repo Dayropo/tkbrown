@@ -192,7 +192,7 @@ const Services = () => {
                   target and retarget prospective customers using various Ad
                   segments: */}
                     Every publisher, big or small, aims to benefit from its ad
-                    space as much as possible. But today's advertising
+                    space as much as possible. But today&apos;s advertising
                     environment is pretty fragmented. It changes constantly,
                     almost at the speed of light. The result? A lot of space
                     remains undersold. We believe that the right technology can
@@ -205,7 +205,7 @@ const Services = () => {
                     increases the competition and allows publishers to sell at
                     the highest possible price. We present an opportunity to cut
                     down ontime consuming and tasks and to immerse into the
-                    publisher's true calls, quality content creation, our
+                    publisher&apos;s true calls, quality content creation, our
                     expertise and advanced technology will handle the
                     monetisation. Keep your company up with a dynamic ad
                     environment and make the most revenue out of it. Give it a
