@@ -3,10 +3,12 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 import Link from "next/link"
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi"
 import Menu from "./Menu"
+import { useRouter } from "next/router"
 
 const Navbar = () => {
   const [active, setActive] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const changeBackground = () => {
@@ -19,6 +21,10 @@ const Navbar = () => {
 
     window.addEventListener("scroll", changeBackground)
   }, [])
+
+  useEffect(() => {
+    setShowMenu(false)
+  }, [router.pathname])
 
   return (
     <nav

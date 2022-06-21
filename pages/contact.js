@@ -1,8 +1,48 @@
 import Head from "next/head"
+import { useState } from "react"
 import { FiChevronDown } from "react-icons/fi"
 import { MdEmail, MdPhone } from "react-icons/md"
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
+
+  const handleOnChange = event => {
+    event.preventDefault()
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    emailjs
+      .send(
+        "service_f311698",
+        "template_976eooi",
+        formData,
+        "gSSEo_CHRkxhPKYc1"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text)
+        },
+        function (error) {
+          console.log("FAILED...", error)
+        }
+      )
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    })
+  }
+
   return (
     <div>
       <Head>
@@ -62,10 +102,10 @@ const Contact = () => {
             </div>
             <p className="text-xl font-semibold">Email Address</p>
             <a
-              href="mailto:info@thetkbrown.com"
+              href="mailto:info@tkbrown.site"
               className="text-sm cursor-pointer"
             >
-              info@thetkbrown.com
+              info@tkbrown.site
             </a>
           </div>
         </div>
@@ -88,31 +128,37 @@ const Contact = () => {
             <p className="text-xl font-semibold">Say Hello To Us!</p>
           </div>
 
-          <form action="">
+          <form onSubmit={e => handleSubmit(e)}>
             <div className="py-4">
               <div className="flex flex-wrap">
                 <div className="lg:w-1/3 sm:w-1/2 w-full px-4 lg:mb-0 mb-4">
                   <input
                     type="text"
-                    name=""
+                    name="name"
                     placeholder="Full Name"
                     className="w-full bg-purple-50 py-3 px-6 rounded-full border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
+                    value={formData.name}
+                    onChange={e => handleOnChange(e)}
                   />
                 </div>
                 <div className="lg:w-1/3 sm:w-1/2 w-full px-4 sm:mb-0 mb-4">
                   <input
                     type="text"
-                    name=""
+                    name="email"
                     placeholder="Email"
                     className="w-full bg-purple-50 py-3 px-6 rounded-full border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
+                    value={formData.email}
+                    onChange={e => handleOnChange(e)}
                   />
                 </div>
                 <div className="lg:w-1/3 sm:w-1/2 w-full px-4">
                   <input
                     type="text"
-                    name=""
+                    name="phone"
                     placeholder="Phone Number"
                     className="w-full bg-purple-50 py-3 px-6 rounded-full border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
+                    value={formData.phone}
+                    onChange={e => handleOnChange(e)}
                   />
                 </div>
               </div>
@@ -120,15 +166,20 @@ const Contact = () => {
 
             <div className="py-4 px-4">
               <textarea
-                name=""
+                name="message"
                 placeholder="Your Message"
                 rows="6"
                 className="w-full py-3 px-6 rounded-lg bg-purple-50 border-none text-black text-sm outline-none focus-within:ring-2 focus-within:ring-purple-400 placeholder:text-gray-400"
+                value={formData.message}
+                onChange={e => handleOnChange(e)}
               ></textarea>
             </div>
 
             <div className="py-4 px-8">
-              <button className="py-3 px-9 text-white bg-purple-600 rounded-full">
+              <button
+                className="py-3 px-9 text-white bg-purple-600 rounded-full"
+                type="submit"
+              >
                 SUBMIT REQUEST
               </button>
             </div>
