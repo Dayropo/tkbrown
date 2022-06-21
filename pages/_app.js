@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-YX0FVV9D1L', {
-          page_path: ${window.location.pathname},
+          page_path: window.location.pathname,
           });
         `}
       </Script>
