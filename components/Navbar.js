@@ -46,6 +46,7 @@ const Navbar = () => {
                 alt="dark logo"
                 objectFit="contain"
                 layout="fill"
+                priority
               />
             ) : (
               <Image
@@ -53,6 +54,7 @@ const Navbar = () => {
                 alt="white logo"
                 objectFit="contain"
                 layout="fill"
+                priority
               />
             )}
           </div>
@@ -83,7 +85,11 @@ const Navbar = () => {
       </div>
 
       <div className="lg:flex hidden items-end">
-        <a href="https://portal.thetkbrown.com" target="_blank">
+        <a
+          href="https://portal.thetkbrown.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button
             className={`${
               active
