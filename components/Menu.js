@@ -27,6 +27,7 @@ const Menu = () => {
         <a
           href="https://portal.thetkbrown.com"
           target="_blank"
+          rel="noreferrer"
           className="flex justify-center px-4 pt-4 border-t border-gray-200"
         >
           <button className="text-center text-sm text-purple-700 border-2 border-purple-700 hover:bg-purple-700 hover:text-white w-full py-1.5 rounded-full">

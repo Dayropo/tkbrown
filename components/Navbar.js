@@ -85,7 +85,11 @@ const Navbar = () => {
       </div>
 
       <div className="lg:flex hidden items-end">
-        <a href="https://portal.thetkbrown.com" target="_blank">
+        <a
+          href="https://portal.thetkbrown.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button
             className={`${
               active
