@@ -46,6 +46,7 @@ const Navbar = () => {
                 alt="dark logo"
                 objectFit="contain"
                 layout="fill"
+                priority
               />
             ) : (
               <Image
@@ -53,6 +54,7 @@ const Navbar = () => {
                 alt="white logo"
                 objectFit="contain"
                 layout="fill"
+                priority
               />
             )}
           </div>
