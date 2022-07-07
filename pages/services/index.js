@@ -180,41 +180,21 @@ const Services = () => {
                 </div>
                 <div>
                   <p className="md:text-base text-xs">
-                    {/* The integration of technology in business has changed what
-                  used to be a level playing field. Advertising has grown beyond
-                  paying Facebook, Instagram, or even google for sponsored Ads.
-                  Traditional advertising is good but the reach of digital
-                  advertising is higher and measurable. Brands and business
-                  owners must take their products and services to the digital
-                  space of their clients and customers. Our Advert engineering
-                  service allows clients use our dedicated Demand Side Platform
-                  to deploy Ads on websites with huge traffic. Our clients can
-                  target and retarget prospective customers using various Ad
-                  segments: */}
-                    Every publisher, big or small, aims to benefit from its ad
-                    space as much as possible. But today&apos;s advertising
-                    environment is pretty fragmented. It changes constantly,
-                    almost at the speed of light. The result? A lot of space
-                    remains undersold. We believe that the right technology can
-                    fix this problem. So we created TKBrown Ads, a service that
-                    helps publishers increase their ad revenue. It opens the
-                    door to a world full of newbuyers by combining several ad
-                    bidding platforms into one. The idea behind this service is
-                    to improve yield management. Our ad technology lets multiple
-                    demand sources bid on the same ad space at the same time. It
-                    increases the competition and allows publishers to sell at
-                    the highest possible price. We present an opportunity to cut
-                    down ontime consuming and tasks and to immerse into the
-                    publisher&apos;s true calls, quality content creation, our
-                    expertise and advanced technology will handle the
-                    monetisation. Keep your company up with a dynamic ad
-                    environment and make the most revenue out of it. Give it a
-                    go, Join us today.
+                    Every publisher aims to benefit from its ad space as much as
+                    possible. We provide the right technology that helps
+                    publishers to increase their ad revenue and opens the door
+                    to a world full of new buyers by combining several ad
+                    bidding platforms into one. Our ad tech lets multiple demand
+                    sources bid on the same ad space at the same time,
+                    increasing the competition and allowing publishers to sell
+                    at the highest possible rate. Keep your company up with a
+                    dynamic ad environment and make the most revenue out of it.
+                    Join us today.
                   </p>
-                  <p className="mt-4">Solutions We Offer</p>
+                  {/* <p className="mt-4">Solutions We Offer</p>
                   <ul className="ml-8">
                     <li className="list-disc">Header Bidding</li>
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="flex justify-end">
                   <Link
@@ -222,7 +202,7 @@ const Services = () => {
                     passHref
                   >
                     <button className="mt-4 border-2 border-purple-400 text-purple-400 px-6 py-2 rounded-full hover:bg-purple-400 hover:text-white">
-                      View Case Studies
+                      Case Studies
                     </button>
                   </Link>
                 </div>

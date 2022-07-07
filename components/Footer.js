@@ -36,7 +36,7 @@ const Footer = () => {
         <p className="lg:text-xl text-lg font-semibold">Get In Touch!</p>
         <div className="mt-8 flex flex-col space-y-6 lg:text-base text-sm">
           <p>
-            Email: <a href="mailto:info@thetkbrown.com">info@thetkbrown.com</a>
+            Email: <a href="mailto:info@thetkbrown.site">info@thetkbrown.site</a>
           </p>
           {/* <p>
             Telephone: <a href="tel:8177770303">817-777-0303</a>,<br />
