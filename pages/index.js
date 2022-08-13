@@ -130,10 +130,9 @@ export default function Home() {
               <div className="mt-10 space-y-5">
                 <p className="font-semibold text-lg">Advertising Technology</p>
                 <p className="text-base">
-                  We provide the right technology that helps publishers to
-                  increase their ad revenue and opens the door to a world full
-                  of new buyers by combining several ad bidding platforms into
-                  one.
+                  We provide the right ad-tech operations and solutions helping
+                  publishers to focus on what&apos;s important, opening the door
+                  to a world full of new buyers and increasing daily ad revenue.
                 </p>
               </div>
               <Link href="/services" passHref>
