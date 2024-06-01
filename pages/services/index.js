@@ -6,6 +6,7 @@ import dms from "../../public/digital-media-strategy.webp"
 import content from "../../public/content-marketing.webp"
 import advertising from "../../public/targeting.webp"
 import adEngineering from "../../public/ad-engineering.webp"
+import linkBuilding from "../../public/link_building.jpg"
 import { LongText } from "../../utils"
 import Link from "next/link"
 
@@ -40,9 +41,7 @@ const Services = () => {
       <header className="relative h-screen bg-purple-900">
         {/**jumbo */}
         <div className="px-8 py-40 h-full font-bold text-white text-center flex items-center justify-center font-oswald">
-          <span className="xl:text-9xl md:text-7xl text-3xl font-semibold">
-            SERVICES
-          </span>
+          <span className="xl:text-9xl md:text-7xl text-3xl font-semibold">SERVICES</span>
         </div>
 
         {/**down button */}
@@ -98,6 +97,12 @@ const Services = () => {
               >
                 Digital Media Advertising
               </span>
+              <span
+                className="cursor-pointer hover:text-purple-400 text-sm"
+                onClick={() => setTab(5)}
+              >
+                Link Building
+              </span>
             </div>
           </div>
         </div>
@@ -106,41 +111,27 @@ const Services = () => {
           <div className="px-8 rounded-2xl border border-gray-50 shadow-outline shadow-gray-200 divide-y-2 divide-gray-200">
             {tab === 0 || tab === 1 ? (
               <div className="py-8">
-                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
-                  Media Strategy
-                </p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">Media Strategy</p>
                 <div className="my-8 w-full h-96 relative">
-                  <Image
-                    src={dms}
-                    alt="Media Strategy"
-                    objectFit="contain"
-                    layout="fill"
-                  />
+                  <Image src={dms} alt="Media Strategy" objectFit="contain" layout="fill" />
                 </div>
                 <p className="md:text-base text-xs">
-                  Through a unique combination of media expertise, we create and
-                  optimise media experiences that connect people to brands and
-                  offer the best strategy for growth and expansion.
+                  Through a unique combination of media expertise, we create and optimise media
+                  experiences that connect people to brands and offer the best strategy for growth
+                  and expansion.
                 </p>
               </div>
             ) : null}
 
             {tab === 0 || tab === 2 ? (
               <div className="py-8">
-                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">
-                  Content Marketing
-                </p>
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">Content Marketing</p>
                 <div className="my-8 w-full h-96 relative">
-                  <Image
-                    src={content}
-                    alt="Content Marketing"
-                    objectFit="contain"
-                    layout="fill"
-                  />
+                  <Image src={content} alt="Content Marketing" objectFit="contain" layout="fill" />
                 </div>
                 <p className="md:text-base text-xs">
-                  We have the expertise to rapidly scale your business, build a
-                  stronger online reputation & brand awareness.
+                  We have the expertise to rapidly scale your business, build a stronger online
+                  reputation & brand awareness.
                 </p>
               </div>
             ) : null}
@@ -160,16 +151,13 @@ const Services = () => {
                 </div>
                 <div>
                   <p className="md:text-base text-xs">
-                    Every publisher aims to benefit from its ad space as much as
-                    possible. We provide the right technology that helps
-                    publishers to increase their ad revenue and opens the door
-                    to a world full of new buyers by combining several ad
-                    bidding platforms into one. Our ad tech lets multiple demand
-                    sources bid on the same ad space at the same time,
-                    increasing the competition and allowing publishers to sell
-                    at the highest possible rate. Keep your company up with a
-                    dynamic ad environment and make the most revenue out of it.
-                    Join us today.
+                    Every publisher aims to benefit from its ad space as much as possible. We
+                    provide the right technology that helps publishers to increase their ad revenue
+                    and opens the door to a world full of new buyers by combining several ad bidding
+                    platforms into one. Our ad tech lets multiple demand sources bid on the same ad
+                    space at the same time, increasing the competition and allowing publishers to
+                    sell at the highest possible rate. Keep your company up with a dynamic ad
+                    environment and make the most revenue out of it. Join us today.
                   </p>
                   {/* <p className="mt-4">Solutions We Offer</p>
                   <ul className="ml-8">
@@ -203,8 +191,26 @@ const Services = () => {
                   />
                 </div>
                 <p className="md:text-base text-xs">
-                  We partner with top online platforms to deploy various ad
-                  formats, optimise and measure engagement.
+                  We partner with top online platforms to deploy various ad formats, optimise and
+                  measure engagement.
+                </p>
+              </div>
+            ) : null}
+
+            {tab === 0 || tab === 5 ? (
+              <div className="py-8">
+                <p className="lg:text-4xl md:text-3xl text-2xl font-semibold">Link Building</p>
+                <div className="my-8 w-full h-96 relative">
+                  <Image src={linkBuilding} alt="Link Building" objectFit="contain" layout="fill" />
+                </div>
+                <p className="md:text-base text-xs">
+                  We excel in delivering top-tier link building services to enhance your clients&apos;
+                  online presence. In today&apos;s competitive digital landscape, our strategic and
+                  innovative approach ensures high-quality, relevant backlinks from reputable
+                  sources, driving organic traffic and boosting search engine visibility. Our
+                  services are tailored to help you achieve your marketing goals, whether it&apos;s
+                  breaking into new markets, strengthening brand reputation, or increasing site
+                  domain authority.
                 </p>
               </div>
             ) : null}
